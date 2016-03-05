@@ -1,0 +1,23 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS练习</title>
+	</head>
+	<body>
+		<script>
+			for( i=100; i<1000; i++ )
+			{
+				g = i % 10;
+				s = Math.floor( i / 10 ) % 10;
+				b = Math.floor( i / 100 );
+				if( i == g*g*g + s*s*s + b*b*b )
+				{
+					console.log( i );
+				}
+				
+				
+			}
+		</script>
+	</body>
+</html>
