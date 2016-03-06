@@ -1,0 +1,30 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS练习</title>
+		<script type="text/javascript">
+			function creatcar(scolor,idoors,impg)
+			{
+				var otempcar = new Object;
+				otempcar.color =scolor;
+				otempcar.door = idoors;
+				otempcar.mpg = impg;
+				otempcar.showdoor = function()
+				{
+					alert(this.door);
+				}
+				return otempcar;
+			}
+			var car1 = creatcar("red", 4, 22);
+			var car2 = creatcar("blue", 2, 20);
+			/*car1.showdoor();
+			car2.showdoor();*/
+		</script>
+	</head>
+	<body>		
+		<input type="button" value="car1" onclick="car1.showdoor()"/>
+		<input type="button" value="car2" onclick="car2.showdoor()"/>
+		<p>工厂方式为函数传递参数</p>
+	</body>
+</html>
