@@ -5,17 +5,21 @@
 		<title>JS练习</title>
 	</head>
 	<body>
-		<script>
-			var string="";
-			for( var j = 0; j<10; j++)
-			{			
-				for( var i = 1; i<j+1; i++ )
-				{				
-					string += i;
+		<script language="javascript">
+			window.onload = function()
+			{
+				var string = "";
+				for( var j = 1; j < 9; j++)
+				{			
+					for( var i = 1; i<j+1; i++ )
+					{				
+						string += i;
+					}
+						string += "<br / >" ;
 				}
-				string += "\n" ;
-			}
-			console.log( string );
+				document.getElementById("demo").innerHTML=string;
+			}	
 		</script>
+		<div id="demo"></div>
 	</body>
 </html>
