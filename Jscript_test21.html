@@ -1,62 +1,34 @@
 <!doctype html>
 <html>
 	<head>
-	<meta charset="utf-8">
-	<title>无标题文档</title>
-	<style>
-		#box1
-		{
-		width:100px;
-		height:50px;
-		background-color:red;
-		transform:rotate(60deg);
-		}
-		#box2
-		{
-		width:100px;
-		height:50px;
-		background-color:#d6d7dc;
-		box-shadow:10px 10px 5px #888888;
-		}
-		
-		div
-		{
-		width:100px;
-		height:50px;
-		background-color:green;
-		transition: width 2s;
-		-webkit-transition: width 2s; /* Safari */
-		} 
-		div:hover
-		{
-		width:300px;
-		} 
-		
-		#myfirst
-		{
-		width:100px;
-		height:50px;
-		
-		animation: myfirst 5s;
-		-webkit-animation: myfirst 5s; /* Safari and Chrome */
-		} 
-		@keyframes myfirst
-		{		
-		from {background: red;}
-		to {background: yellow;}
-		}		
-		@-webkit-keyframes myfirst /* Safari and Chrome */
-		{
-		from {background: red;}
-		to {background: yellow;}
-		}
-	</style>
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<title>javascript</title>
 	</head>
-
 	<body>
-		<div id=box1>这是一个盒子</div>
-		<div id=box2>这是一个盒子</div>
-		<div></div>
-		<div id=myfirst></div>
+		
+		<script>
+			var person=prompt("Please enter your name","Harry Potter");
+			if (person!=null && person!="")
+			  {
+			  x="Hello " + person + "! How are you today?";
+			  document.write(x)
+			  } 
+			  
+			
+			 //setInterval(function(){alert("Hello")},3000); 
+		</script>
+		
+		
+		<br/>	
+		<input type="text" name="username" value="mary" maxlength="6"/>
+		<br/>
+		<input type="password" name="pwd" maxlength="8"/>
+		<br/>		
+		<input type="checkbox" name="chkHid" id="chkHid"/>
+		
+		<label for="chkHid">不要公开我的信息</label>
+		
+		
 	</body>
 </html>
+

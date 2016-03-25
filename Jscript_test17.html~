@@ -8,7 +8,7 @@
 			{
 				alert(this.doors);
 			}
-			function colors()
+			function scolor()
 			{
 				alert(this.color);
 			}
@@ -19,7 +19,6 @@
 				otempcar.doors = idoors;
 				otempcar.mpg = impg;
 				otempcar.show = showdoor;
-				otempcar.showcolor = colors;
 				return otempcar;
 			}
 			var car1 = creatcar("red", 4, 20);
@@ -29,7 +28,7 @@
 		</script>
 	</head>
 	<body>		
-		<input type="button" value="car1" onclick="car1.showcolor()"/>
+		<input type="button" value="car1" onclick="car1.color()"/>
 		<input type="button" value="car2" onclick="car2.show()"/>
 		<p>工厂外函数定义对象</p>
 	</body>
