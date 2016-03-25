@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>test browsers</title>
+		<script type="text/javascript">//JavaScript 在 IE6、IE5 和 IE4 中的获得的版本号是相同的,4.0.
+			function testBrowser()
+			{
+				var browser = navigator.appName;
+				var b_version = navigator.appVersion;
+				var version = parseFloat(b_version);
+				if ((version >= 4) && (browser == "Netscape"||browser == "Micrsoft Internet Explorer"))
+				{
+					alert("Your browser is good enough!");
+				}else
+				{
+					alert("You need to upgrade your browser!");
+				}
+			}
+			
+			window.onload = testBrowser;
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
