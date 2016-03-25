@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+
+			function plus()
+			{
+				var num = document.getElementById("result").innerHTML;	
+				num++;
+				document.getElementById("result").innerHTML = num;
+			}
+			function subtraction()
+			{
+				var num = document.getElementById("result").innerHTML;	
+				num--;
+				document.getElementById("result").innerHTML = num;
+			}
+
+		</script>
+
+
+	</head>
+
+
+	<body>
+		<input type="button" onclick="plus()" value="+" />
+		<div id="result"  style="height:20px; width:20px;background-color:#4cd2ff;">10</div>
+		<input type="button" value="-" onclick="subtraction()"/>
+	</body>
+
+</html>
