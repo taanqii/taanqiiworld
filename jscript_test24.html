@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+		<title>javascript</title>
+	</head>
+	<body>
+		<script>
+		//弹出窗口
+		function myfunction()
+		{
+			alert("hello world");
+		}
+		//传入函数值
+		function my2function(name,job)
+		{
+			alert("welcom! " + name + " ,the  " + job);
+		}
+		//
+		var day=new Date().getDay()
+		switch(day)
+		{
+			case 6:
+				x="Today is Saturday";
+				break;
+			case 0:
+				x="Today is Sunday";
+				break;
+			default:
+				x="Looking forward to the Weekend";
+		}
+		console.log(x)
+		
+		//try catch 语句 验证数值
+		function my3Function()
+			{
+			try
+			  { 
+				  var x=document.getElementById("demo").value;
+				  if(x=="")    throw "empty";
+				  if(isNaN(x)) throw "not a number";
+				  if(x>10)     throw "too high";
+				  if(x<5)      throw "too low";
+			  }
+			catch(err)
+			  {
+				  var y=document.getElementById("mess");
+				  y.innerHTML="Error: " + err + ".";
+			  }
+			}
+		//必选项目	
+		function validateForm()
+			{
+			var x=document.forms["myForm"]["fname"].value;
+			if (x==null || x=="")
+			  {
+			  alert("First name must be filled out");
+			  return false;
+			  }
+			}
+		//验证邮箱	？
+			function validateForm2()
+			{
+			var x=document.forms["myForm2"]["email"].value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+			  {
+			  alert("Not a valid e-mail address");
+			  return false;
+			  }
+			}
+			document.write(Date());
+		</script>
+		<input type="button" value="点击" onclick="myfunction()">
+		
+		<button onclick="my2function('Tom','doctor')">try it</button>
+		<button onclick="my2function('Lucy','teacher')">try it</button>
+		
+		<h1>My First JavaScript</h1>
+        <p>Please input a number between 5 and 10:</p>
+        <input id="demo" type="text">
+        <button type="button" onclick="my3Function()">Test Input</button>		
+        <p id="mess"></p>
+		
+		
+	    必选项目
+		<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+		First name: <input type="text" name="fname">
+			<input type="submit" value="Submit">
+		</form>
+		
+		验证e-mail 有问题？
+		<form name="myForm2" action="demo_form.asp" onsubmit="return validateForm2();" method="post">
+		Email: <input type="text" name="email">
+		<input type="submit" value="Submit">
+		</form>
+		
+		
+	</body>
+</html>
