@@ -1,0 +1,49 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>计算器</title>
+		<script type="text/javascript" src="javascript.js" language="javascript"></script>
+		<script type="text/javascript">
+		
+		function count()
+		{
+			var num1 = document.getElementById("num1").value;
+			var num2 = document.getElementById("num2").value;
+			var operation = document.getElementById("select").value;
+			var result = "";
+			switch(operation)
+			{
+				case "+" : 
+					result = parseFloat(num1) + parseFloat(num2);
+					break;
+				case "-" : 
+					result = parseFloat(num1) - parseFloat(num2);
+					break;
+				case "*" : 
+					result = parseFloat(num1) * parseFloat(num2);
+					break;
+				default: 
+					result = parseFloat(num1) / parseFloat(num2);
+			}
+			document.getElementById("fruit").value = result;
+		}	
+		
+		</script>
+	</head>
+	<body>
+		<input type="text" id="num1" />
+		<form>
+			<select id="select">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+		</form>
+		<input type="text" id="num2" />
+		<input type="button" id="do" value="=" onclick="count();" />
+		<input type="text" id="fruit" />
+		
+	</body>
+</html>
