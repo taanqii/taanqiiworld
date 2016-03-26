@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>返回星期</title>
+		<script type="text/javascript" src="javascript.js" language="javascript"></script>
+		<script type="text/javascript">
+			var mydate = new Date();
+			var myweek = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+			var myday = mydate.getDay();//getDay 返回值为0-6,0代表星期日。
+			document.write("今天是："+myweek[myday])
+
+			var mydate=new Date();//当前时间2014年3月6日
+			document.write(mydate+"<br>");//输出当前时间
+			document.write(mydate.getFullYear()+"<br>");//输出当前年份
+			mydate.setFullYear(81); //设置年份
+			document.write(mydate+"<br>"); //输出年份被设定为 0081年。
+
+			var mydate=new Date();
+			document.write("当前时间："+mydate+"<br>");
+			mydate.setTime(mydate.getTime() + 60 * 60 * 1000);
+			document.write("推迟一小时时间：" + mydate);
+			//1. 一小时 60 分，一分 60 秒，一秒 1000 毫秒
+			//2. 时间推迟 1 小时,就是: “x.setTime(x.getTime() + 60 * 60 * 1000);”
+
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
