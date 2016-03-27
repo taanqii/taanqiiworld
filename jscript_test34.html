@@ -1,0 +1,33 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>浏览器对象</title>
+		<!--<script type="text/javascript" src="javascript.js" language="javascript"></script>-->
+		
+
+	</head>
+	<body>
+		操作成功<br / >
+		<b id="sec">5</b>秒后返回主页<a href="javascript:goBack();">返回</a>
+		<script type="text/javascript">		
+		var i = 5;
+			var timer = setInterval
+			(
+				function()
+				{
+					i--;
+					document.getElementById("sec").innerHTML = i;
+					if (i == 1)
+					{
+						window.location.href = "http://www.imooc.com";
+					}
+				},1000
+			);			
+			function goBack()
+			{
+				window.history.go(-1);
+			}
+		</script>
+	</body>
+</html>
