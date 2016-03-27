@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>确认打开新窗口</title>
+		<!--<script type="text/javascript" src="javascript.js" language="javascript"></script>-->
+		<script type="text/javascript">
+			function openWindow()
+			{
+				var windowconfirm = confirm("是否打开？");
+				if (windowconfirm == true)
+				{
+					window.open('http://www.imooc.com','_blank','width=600 height=400');
+				}else
+				{
+					return;
+				}
+			}
+	</script>
+	</head>
+	<body>
+		<form>
+		<input type="button" value="点击我，打开新窗口" onclick="openWindow();" />
+		</form>
+	</body>
+</html>
