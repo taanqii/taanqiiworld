@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>显示当前时间计时器</title>
+		<!--<script type="text/javascript" src="javascript.js" language="javascript"></script>-->
+		<script type="text/javascript">
+		 var attime,hh,mm,ss,ww,xx;
+		 function clock()
+		 {
+		  var time = new Date();
+		  hh = time.getHours();
+		  mm = time.getMinutes();
+		  ss = time.getSeconds();
+		  if(mm<10){mm = "0" + mm};
+		  if(hh<10){hh = "0" + hh};
+		  if(ss<10){ss = "0" + ss};
+		  var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		  ww = time.getDay();
+		  xx = week[ww];
+		  altime = hh+":"+mm+":"+ss+xx;
+		  document.getElementById("clock").value = altime;
+		 }
+		 var int = setInterval(clock,100);
+	</script>
+	</head>
+	<body>
+		<form>
+		<input type="text" id="clock" size="50" />
+		</form>
+	</body>
+</html>
